@@ -1,0 +1,11 @@
+{
+  "core": "https://ja.wordpress.org/latest-ja.zip",
+  "plugins": [],
+  "themes": ["./fudousan-ichiba"],
+  "port": 4023,
+  "env": {
+    "tests": {
+      "port": 14022
+    }
+  }
+}

@@ -1,0 +1,500 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+@use "../parts/button" as *;
+
+.single {
+  @extend .pt-md;
+  min-height: 60vh;
+  &__inner {
+    @extend .content-width1000;
+
+    @extend .pb-lg;
+  }
+  &__content {
+    &-header {
+      & > time {
+        color: $lightGray;
+      }
+      & h2 {
+        border-left: 4px solid #1c1c22;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 900;
+        @include mq(md) {
+          font-size: 20px;
+        }
+      }
+    }
+    &-des {
+      font-size: 14px;
+      @extend .mb-lg;
+      &-img {
+        width: 100%;
+        margin: 0 auto;
+        @extend .mb-md;
+        height: 230px;
+        @include mq(lg) {
+          height: 330px;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-text {
+      background: #fcfdff;
+      border: 0.5px solid $cBgGray;
+      padding: 12px;
+      border-radius: 3px;
+      @include mq(lg) {
+        padding: 30px;
+      }
+      & p {
+        @extend .font-sm;
+        margin-bottom: 10px;
+        line-height: 1.8em;
+      }
+      & img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__list-btn {
+    text-align: center;
+    & > a {
+      border: solid 1px $lightGray;
+    }
+  }
+}
+
+.works-list {
+  @extend .pb-lg;
+  @extend .pt-md;
+  &__inner {
+    margin-bottom: 40px;
+    @include mq(lg) {
+      margin-bottom: 0;
+    }
+  }
+  &__block {
+    @extend .pb-md;
+    & > a {
+      text-decoration: none;
+    }
+    &-inner {
+      @extend .flex;
+      justify-content: space-between;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    width: 100%;
+    & > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    @include mq(md) {
+      flex-basis: 29%;
+
+      & > img {
+        height: 100%;
+      }
+    }
+  }
+  &__contents {
+    padding: 10px 0;
+    color: $main-txt;
+    flex-basis: 70%;
+    width: 100%;
+    & > time {
+      font-size: 12px;
+      color: rgb(182, 182, 182);
+    }
+    @include mq(md) {
+      padding: 0;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    @extend .font-md;
+    margin-bottom: 7px;
+    color: $cTextRed;
+  }
+  &__point {
+    color: $main-txt;
+    @extend .font-md;
+  }
+  &__desc {
+    @extend .font-sm;
+  }
+  &__notinfo {
+    text-align: center;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+    &-inner {
+      & > p {
+        @extend .mb-lg;
+      }
+    }
+  }
+  &__not-btn {
+    & > a {
+      background: $cBtnColor;
+      color: $cWhite;
+    }
+  }
+}
+
+.archive-list {
+  width: 100%;
+  flex-basis: 28%;
+  &__block {
+    border-radius: 10px;
+    background: $cBgGray;
+    padding: 23px 18px 23px;
+    position: relative;
+    @extend .mb-md;
+  }
+  &__ul {
+    list-style: none;
+    padding: 0;
+    & > li {
+      border-bottom: 2px dotted $lightGray;
+      & > a {
+        display: block;
+        text-decoration: none;
+        color: $main-txt;
+        padding: 12px 15px;
+        @extend .font-sm;
+      }
+    }
+  }
+  &__childーul {
+    list-style: none;
+    & > li {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background: $cBlack;
+        width: 15px;
+        height: 1px;
+        top: 50%;
+        left: -17px;
+      }
+      & > a {
+        display: block;
+        text-decoration: none;
+        color: $main-txt;
+        padding: 12px 15px;
+        @extend .font-sm;
+      }
+    }
+  }
+  &__tltle {
+    position: absolute;
+    top: -10px;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  &__dropdown {
+    width: 100%;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+  }
+}
+
+.news-flex {
+  @extend .content-width;
+  @extend .flex960;
+  justify-content: space-between;
+  &__inner {
+    flex-basis: 65%;
+  }
+}
+.work-flex {
+  @extend .content-width;
+  @extend .flex960;
+  justify-content: space-between;
+  &__inner {
+    @include mq(lg) {
+      flex-basis: 65%;
+    }
+  }
+}
+
+.property {
+  @extend .pt-md;
+  &__content {
+    &-header {
+      @extend .content-width1000;
+      & > time {
+        color: $lightGray;
+      }
+      & h2 {
+        border-left: 4px solid #1c1c22;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 900;
+        @include mq(md) {
+          font-size: 20px;
+        }
+      }
+    }
+    &-des {
+      font-size: 14px;
+      &-img {
+        @extend .content-width1000;
+        width: 100%;
+        margin: 0 auto;
+        @extend .mb-md;
+        height: 230px;
+        @include mq(lg) {
+          height: 330px;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &-text {
+      background: #fcfdff;
+      border: 0.5px solid $cBgGray;
+      padding: 12px;
+      border-radius: 3px;
+      @include mq(lg) {
+        padding: 30px;
+      }
+      & p {
+        @extend .font-sm;
+        margin-bottom: 10px;
+        line-height: 1.8em;
+      }
+      & img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__block {
+    @extend .pb-md;
+  }
+  &-flex {
+    @extend .content-width1000;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    @extend .mb-sm;
+
+    @include mq(lg) {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .image-area-left {
+      width: 100%;
+      @include mq(md) {
+        flex-basis: 59%;
+        width: 59%;
+      }
+    }
+    .image-area-right {
+      border: 1px solid $lightGray;
+      width: 100%;
+      margin-bottom: 16px;
+      & > img {
+        padding: 20px;
+      }
+      @include mq(lg) {
+        flex-basis: 39%;
+        width: 39%;
+        margin-bottom: 0;
+      }
+    }
+    .contents-area-left {
+      padding: 10px;
+      background: $cWhite;
+      width: 100%;
+      @include mq(lg) {
+        flex-basis: 69%;
+        width: 69%;
+      }
+      @include mq(lg) {
+        padding: 50px 40px;
+      }
+    }
+    .contents-area-right {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 16px;
+      & > img {
+        padding: 20px;
+      }
+      @include mq(lg) {
+        position: sticky;
+        top: 100px;
+        flex-basis: 28%;
+        width: 28%;
+        margin-bottom: 0;
+      }
+    }
+    .contents-area-dl {
+      line-height: 1.6;
+      @extend .font-ssm;
+      margin-bottom: 40px;
+
+      & dt {
+        width: 90px;
+        color: #666666;
+        float: left;
+        padding: 12px 0 10px;
+        clear: left;
+        @include mq(md) {
+          width: 150px;
+        }
+      }
+      & dd {
+        padding: 10px 0 10px 100px;
+        border-bottom: 2px solid #eee;
+        min-height: 5em;
+        @include mq(md) {
+          padding: 10px 0 10px 150px;
+        }
+      }
+    }
+  }
+}
+.slick-img {
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.thumbnail {
+  @extend .content-width1000;
+  & .slick-track {
+    transform: unset !important;
+  }
+  &-img {
+    width: calc(100% / 5) !important;
+  }
+}
+.detail-price {
+  margin-bottom: 14px;
+  &-box {
+    border: 1px solid $lightGray;
+  }
+}
+.price-box {
+  &-main {
+    padding: 14px 10px;
+    border-bottom: 1px dotted $lightGray;
+    & .num {
+      color: $cTextRed;
+      font-weight: 800;
+      font-size: 19px;
+    }
+    & dt {
+      float: left;
+      clear: left;
+      font-weight: 800;
+    }
+    & dd {
+      text-align: right;
+      min-height: 1.5em;
+    }
+    @include mq(md) {
+      padding: 14px 24px;
+    }
+  }
+  &-sub {
+    @extend .font-ssm;
+    padding: 14px 10px;
+    @include mq(md) {
+      padding: 14px 24px;
+    }
+
+    & dt {
+      float: left;
+      clear: left;
+    }
+    & dd {
+      text-align: right;
+      min-height: 1.5em;
+    }
+  }
+}
+.detail-btn {
+  text-align: center;
+}
+.detail-icon {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+
+  & li {
+    flex-basis: 49%;
+    position: relative;
+    height: 104px;
+    text-align: center;
+    background: #ccc;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    & > img {
+      display: inline-block;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+    }
+    &.checked {
+      background: $mainColor-o;
+    }
+  }
+}
+
+.property-archiveTable {
+  width: 100%;
+  & tr {
+    font-size: 12px;
+    & th {
+      width: 70px;
+      height: 33px;
+      border-bottom: 1px solid $cWhite;
+      text-align: center !important;
+      vertical-align: middle;
+      background-color: #ededed;
+      color: #999999;
+      font-weight: normal;
+
+      padding: 8px 10px;
+      line-height: 1;
+    }
+    & td {
+      background-color: #ffffff;
+      border-bottom: 1px solid #dedede;
+      vertical-align: middle !important;
+      padding: 5px;
+    }
+  }
+}

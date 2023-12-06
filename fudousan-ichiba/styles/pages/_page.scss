@@ -1,0 +1,361 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+@use "../parts/button" as *;
+
+.page-content {
+  &__inner {
+    @extend .pt-md;
+  }
+  &__blocks {
+    @extend .content-width;
+    @extend .mb-lg;
+  }
+  &__block {
+    font-family: "Noto Sans JP", sans-serif;
+    @extend .mb-md;
+    & h3 {
+      border-bottom: 1px solid $mainColor;
+      @extend .mb-sm;
+      color: $mainColor;
+      font-weight: 400;
+      @extend .font-md;
+    }
+    & p {
+      @extend .font-sm;
+      @extend .mb-sm;
+      line-height: 1.8em;
+    }
+    &-content {
+      & h4 {
+        font-family: "Noto Serif JP", serif;
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+    }
+    &-inner {
+      &-contents {
+        @extend .mb-md;
+        & h4 {
+          border-left: 4px solid $mainColor;
+          padding-left: 5px;
+        }
+      }
+      &-content {
+        margin-top: 20px;
+        @include mq(md) {
+          margin-top: 40px;
+        }
+        & h5 {
+          font-size: 16px;
+        }
+        & figure {
+          @extend .mb-md;
+        }
+      }
+    }
+  }
+  &__table {
+    & table {
+      & tr {
+        @extend .flex;
+        border-bottom: solid 1px rgba(136, 136, 136, 0.1);
+      }
+      & td {
+        &:nth-child(1) {
+          padding: 10px 0;
+          width: 100%;
+          background: #f0f0f0;
+          flex-basis: 30%;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @extend .font-sm;
+          @include mq(md) {
+            padding: 20px 0;
+          }
+        }
+        &:nth-child(2) {
+          @extend .font-sm;
+          padding: 10px 5px;
+          width: 100%;
+          flex-basis: 70%;
+          border: none;
+          @include mq(md) {
+            padding: 20px 15px;
+          }
+        }
+      }
+    }
+  }
+  &__table02 {
+    @extend .font-sm;
+    overflow-x: scroll;
+    & table {
+      width: 100%;
+      border-collapse: collapse;
+      white-space: nowrap;
+    }
+    & td {
+      padding: 10px 20px 10px 3px;
+
+      @include mq(md) {
+        padding: 20px 15px;
+      }
+    }
+  }
+  &__map {
+    & iframe {
+      width: 100%;
+    }
+  }
+}
+
+.about-mess {
+  @extend .mb-lr;
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__desc {
+    @extend .font-sm;
+    @extend .mb-sm;
+    @extend .pb-md;
+    border-bottom: 1px dotted $mainColor;
+  }
+
+  &__profile {
+    &-name {
+      text-align: center;
+      margin-bottom: 16px;
+      & > h3 {
+        @extend .font-md;
+      }
+      & > h4 {
+        @extend .font-sm;
+      }
+    }
+    &-desc {
+      & p {
+        @extend .font-sm;
+      }
+    }
+  }
+}
+.about-policy {
+  @extend .mb-lr;
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__block {
+    @extend .mb-sm;
+    & > h3 {
+      margin-bottom: 10px;
+      @extend .font-md;
+      & > span {
+        border-bottom: 2px solid $cColorRed;
+      }
+    }
+    & ul {
+      @extend .font-sm;
+      line-height: 1.8;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+}
+.about-info {
+  background: $cBgGray;
+  @extend .pb-lr;
+  @extend .pt-md;
+  @extend .mb-lr;
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+.works-contents {
+  @extend .mb-md;
+  &:nth-child(odd) {
+    background: $cBgGray;
+    @extend .pt-md;
+    @extend .pb-sm;
+  }
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__desc {
+    @extend .font-sm;
+    border: 1px dotted $mainColor;
+    border-radius: 10px;
+    padding: 20px 10px;
+    @extend .mb-md;
+    @include mq(md) {
+      padding: 30px 40px;
+    }
+  }
+}
+.each-production {
+  @extend .mb-md;
+  &__image {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & li {
+      flex-basis: 49%;
+      margin-bottom: 10px;
+      @include mq(md) {
+        flex-basis: 33%;
+      }
+    }
+  }
+  & .sub-title {
+    position: relative;
+    background: $cBlue;
+    padding: 10px 10px 10px 50px;
+    margin-bottom: 10px !important;
+    color: $cWhite;
+    &::before {
+      content: "\f0ad";
+      position: absolute;
+      top: 2px;
+      left: 10px;
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+      font-size: 25px;
+    }
+
+    @include mq(lg) {
+      padding: 20px 20px 20px 50px;
+      &::before {
+        top: 10px;
+        left: 10px;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.page-contact {
+  @extend .pb-lr;
+  &__desc {
+    @extend .font-sm;
+    @extend .mb-sm;
+    @extend .pb-md;
+
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__btn {
+    text-align: center;
+    & > a {
+      background: $mainColor;
+      color: $cWhite;
+    }
+  }
+}
+
+.site-map {
+  &__top {
+    @extend .mb-sm;
+    & p {
+      @extend .font-md;
+      font-weight: 800;
+      & a {
+        color: $mainColor;
+      }
+    }
+  }
+  &__box {
+    background: #fcfdff;
+    border: 0.5px solid #e9ecf2;
+    @extend .mb-sm;
+    padding: 10px 10px;
+    @include mq(sm) {
+      padding: 30px 20px;
+    }
+    @include mq(lg) {
+      padding: 40px 30px;
+    }
+    & h2 {
+      margin-bottom: 10px;
+
+      @extend .font-md;
+
+      & > a {
+        color: $mainColor;
+        @extend .font-md;
+      }
+    }
+    & ul {
+      @extend .mb-sm;
+      & li {
+        & > a {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.sm-list-page {
+  list-style: none;
+  & li {
+    position: relative;
+    margin-bottom: 3px;
+    &::after {
+      content: "\f3bf";
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: rotate(90deg) translateX(-110%);
+      color: $lightGray;
+    }
+  }
+}
+
+.sm-list-post {
+  list-style: none;
+  & li {
+    position: relative;
+    margin-bottom: 3px;
+    &::after {
+      content: "\f054";
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-40%);
+      color: $lightGray;
+    }
+  }
+}
+
+.page-404 {
+  @extend .font-sm;
+  @extend .content-width;
+  padding: 80px 0;
+
+  &__btn {
+    padding: 50px 0;
+    text-align: center;
+    & > a {
+      background: $mainColor;
+      color: $cWhite;
+    }
+  }
+}
