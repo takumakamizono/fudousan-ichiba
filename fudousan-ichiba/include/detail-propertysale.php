@@ -1,8 +1,40 @@
 <div class="property__block bg-gray pt-md">
                         <div class="property-flex">
                           <div class="contents-area-left">
-                            <h3 class="main-title-left">DETAIL DATA</h3>
-                            <?php the_content(); ?>
+                            <h3 class="main-title-left mb-sm">DETAIL DATA</h3>
+                            <?php
+$table = get_field( '詳細情報' );
+if ( ! empty ( $table ) ) {
+    echo '<table class="property-singleTable">';
+        if ( ! empty( $table['caption'] ) ) {
+            echo '<caption>' . $table['caption'] . '</caption>';
+        }
+        if ( ! empty( $table['header'] ) ) {
+            echo '<thead>';
+                echo '<tr>';
+                    foreach ( $table['header'] as $th ) {
+                        echo '<th>';
+                            echo $th['c'];
+                        echo '</th>';
+                    }
+                echo '</tr>';
+            echo '</thead>';
+        }
+        echo '<tbody>';
+            foreach ( $table['body'] as $tr ) {
+                echo '<tr>';
+                    foreach ( $tr as $td ) {
+                        echo '<td>';
+                            echo $td['c'];
+                        echo '</td>';
+                    }
+                echo '</tr>';
+            }
+        echo '</tbody>';
+    echo '</table>';
+}
+?>
+
 
                           </div>
                           <div class="contents-area-right ">
@@ -16,25 +48,32 @@
           
                       </div>
             <section class="detail-price">
-              <!-- <h3 class="mgn-btm-20"><img src="/images/detail_price_ttl.png" alt="費用について" class="img-sp" width="145" height="22"></h3> -->
               <div class="detail-price-box">
                 <dl class="price-box-main">
                   <dt>価格</dt>
                   <dd id="price"><strong class="num"><?php the_field('price-propertysale');?></strong>万円</dd>
                 </dl>
+              
+                
                 <dl class="price-box-sub">
-                  <dt>間取り</dt>
-                  <dd><?php the_field('floorplan-myhome');?></dd>
-                  <dt>建物面積</dt>
-                  <dd><?php the_field('building-area');?></dd>
-                  <dt>土地面積</dt>
-                  <dd><?php the_field('land-area');?></dd>
-                  <dt>築年月</dt>
-                  <dd><?php the_field('years-construction');?></dd>
-                  <dt>築年数</dt>
-                  <dd><?php the_field('years');?></dd>
+                <?php if(has_term('land-sale', 'kind') ):?>
+                <dt>坪単価</dt>
+                  <dd><?php the_field('price-per-tsubo');?></dd>
+                  <?php endif;?>
+                  <dt>借地期間・地代(月額)</dt>
+                  <dd><?php the_field('地代');?></dd>
+                  <dt>権利金</dt>
+                  <dd><?php the_field('権利金');?></dd>
+                  <dt>敷金 / 保証金</dt>
+                  <dd><?php the_field('保証金');?></dd>
+                  <dt>維持費等</dt>
+                  <dd><?php the_field('維持費');?></dd>
+                  <dt>その他一時金</dt>
+                  <dd><?php the_field('その他一時金');?></dd>
                 </dl>
+              
               </div>
+
             </section>
             
                           </div>

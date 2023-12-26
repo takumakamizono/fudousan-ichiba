@@ -249,13 +249,34 @@
 .page-contact {
   @extend .pb-lr;
   &__desc {
-    @extend .font-sm;
-    @extend .mb-sm;
-    @extend .pb-md;
+    @extend .mb-lr;
 
-    max-width: 800px;
-    margin: 0 auto;
-    width: 90%;
+    @extend .content-width1000;
+    & dl {
+      line-height: 2;
+      & dt {
+        text-align: center;
+        @extend .mb-sm;
+
+        & > span {
+          width: 100%;
+          max-width: 400px;
+          padding: 7px 10px;
+          border: solid 1px $mainColor;
+
+          font-weight: bold;
+          @extend .font-md;
+
+          border-radius: 3px;
+          text-align: center;
+          display: inline-block;
+        }
+      }
+      & dd {
+        @extend .mb-md;
+        @extend .font-md;
+      }
+    }
   }
   &__btn {
     text-align: center;

@@ -26,28 +26,28 @@ $land_img = get_field('land_img', 56);
     <div class="section-titles">
             <h3 class="main-title">RECOMMENDED<span>物件別イチオシの特集！</span></h3>
         </div>
-        <ul class="menu-list">
-            <li class="menu-list__item">
+        <ul class="menu-list appear up">
+            <li class="menu-list__item item">
                 <div class="hovereffect">
-                    <img class="bg-blur-img" src="<?= esc_url($myhome_img); ?>" alt="">
+                    <img class="bg-blur-img" src="<?= esc_url($myhome_img); ?>" alt="カテゴリ画像">
                     <div class="overlay">
                     <h2><?= esc_html($myhome_tit); ?></h2>
                     <a class="info" href="<?= get_term_link('myhome', 'kind'); ?>"><?= esc_html($myhome_titEN); ?></a>
                     </div>
                 </div>
             </li>
-            <li class="menu-list__item">
+            <li class="menu-list__item item">
                 <div class="hovereffect">
-                    <img class="bg-blur-img" src="<?= esc_url($rentalhome_img); ?>" alt="">
+                    <img class="bg-blur-img" src="<?= esc_url($rentalhome_img); ?>" alt="カテゴリ画像">
                     <div class="overlay">
                     <h2><?= esc_html($rentalhome_tit); ?></h2>
                     <a class="info" href="<?= get_term_link('rentalhome', 'kind'); ?>"><?= esc_html($rentalhome_titEN); ?></a>
                     </div>
                 </div>
             </li>
-            <li class="menu-list__item">
+            <li class="menu-list__item item">
                 <div class="hovereffect">
-                    <img class="bg-blur-img" src="<?= esc_url($parking_img); ?>" alt="">
+                    <img class="bg-blur-img" src="<?= esc_url($parking_img); ?>" alt="カテゴリ画像">
                     <div class="overlay">
                     <h2><?= esc_html($parking_tit); ?></h2>
                     <a class="info" href="<?= get_term_link('parking', 'kind'); ?>"><?= esc_html($parking_titEN); ?></a>
@@ -55,23 +55,25 @@ $land_img = get_field('land_img', 56);
                 </div>
             </li>
         
-            <li class="menu-list__item">
+            <li class="menu-list__item item">
                 <div class="hovereffect">
-                    <img class="bg-blur-img" src="<?= esc_url($tenant_img); ?>" alt="">
+                    <img class="bg-blur-img" src="<?= esc_url($tenant_img); ?>" alt="カテゴリ画像">
                     <div class="overlay">
                     <h2><?= esc_html($tenant_tit); ?></h2>
-                    <a class="info" href="<?= get_term_link('tenant', 'kind'); ?>"><?= esc_html($tenant_titEN); ?></a>
+                    <a class="info" href="<?= get_term_link('commercial', 'kind'); ?>"><?= esc_html($tenant_titEN); ?></a>
                     </div>
                 </div>
             </li>
-            <li class="menu-list__item">
+            <li class="menu-list__item item">
                 <div class="hovereffect">
-                    <img class="bg-blur-img" src="<?= esc_url($land_img); ?>" alt="">
+                    <img class="bg-blur-img" src="<?= esc_url($land_img); ?>" alt="カテゴリ画像">
                     <div class="overlay">
                     <h2><?= esc_html($land_tit); ?></h2>
                     <a class="info" href="<?= get_term_link('land', 'kind'); ?>"><?= esc_html($land_titEN); ?></a>
                     </div>
                 </div>
+            </li>
+            <li class="menu-list__item item">
             </li>
            
         </ul>

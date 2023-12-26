@@ -27,7 +27,23 @@
                     <div class="property__content-header">
                     <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
                     
-                     <h2><?php the_title(); ?></h2>         
+                     <h2><?php the_title(); ?></h2>  
+                     <?php
+$point = '';
+
+if (has_term('rentalhome', 'kind')||has_term('rented-commercial', 'kind')||has_term('rented-land', 'kind')||has_term('parking', 'kind')) {
+    $point = get_field('rental-point');
+} elseif (has_term('myhome', 'kind')||has_term('commercial-for-sale', 'kind')||has_term('land-sale', 'kind')) {
+    $point = get_field('sale-point');
+} 
+
+if (!empty($point)) {
+    echo '<h4 class="works-list__point">' . $point . '</h4>';
+}
+?>
+  <ul class="cat">
+                       <?php custom_taxonomy_labels(); ?>
+                       </ul>       
                     </div>
                     <div class="property__content-des">
                         <div class="property__block ">
@@ -248,9 +264,9 @@
     </div>
   </div>
                        </div>
-                       <?php if ( has_term('rentalhome', 'kind') ): ?>
+                       <?php if (  has_term('rentalhome', 'kind')|| has_term('rented-commercial', 'kind')||has_term('rented-land', 'kind') || has_term('parking', 'kind') ): ?>
                         <?php get_template_part('include/detail-rental'); ?>
-                        <?php elseif(has_term('myhome', 'kind') ):?>
+                        <?php elseif(has_term('myhome', 'kind')||has_term('commercial-for-sale', 'kind')||has_term('land-sale', 'kind') ):?>
                         <?php get_template_part('include/detail-propertysale'); ?>
                         <?php endif;?>
                         <div class="single__list-btn">

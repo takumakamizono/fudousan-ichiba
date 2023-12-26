@@ -3,9 +3,7 @@
                 <div class="hero__inner">
          <div class="hero__catch"> 
           <div class="hero__catch-inner">
-<img class="" src="<?php echo get_template_directory_uri(); ?>/images/hero_catch.png" alt="">
-<p class="">ふどうさん市場は不動産売買・リフォームを中心に、土地建物査定・土地活用の相談窓口です。<br>
-また、賃貸・戸建て・事務所等のお部屋探しをお手伝いします。</p>
+<img class="" src="<?php echo get_template_directory_uri(); ?>/images/hero_catch02.png" alt="トップのキャッチフレーズ画像">
 </div>
 </div>    
                   <div class="sun"></div>
@@ -23,6 +21,7 @@
 <?php elseif (is_post_type_archive('property')) : ?>
     <?php 
     $post_type_object = get_post_type_object(get_post_type());
+   
     if ($post_type_object) {
     $post_type_name = $post_type_object->labels->menu_name;
     $post_type_slug = $post_type_object->rewrite['slug']; 
@@ -36,6 +35,7 @@
   } else {
     $post_type_name = "カスタム投稿がありません"; // カスタム投稿が存在しない場合のデフォルトのタイトル
     $post_type_slug = "property"; // カスタム投稿が存在しない場合のデフォルトのスラッグ
+    
 }
     ?>
     <div class="hero-sub">    
@@ -61,7 +61,8 @@ if ($terms && is_array($terms)) {
     $term_slug = 'coming soon'; // カテゴリがない場合のデフォルト値
 }
 ?>
-      <div class="hero-sub">    
+      <div class="hero-sub">  
+    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">
                          

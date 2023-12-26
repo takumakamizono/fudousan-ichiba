@@ -2,7 +2,7 @@
             <h1 class="logo item">
               <a href="<?= esc_url(home_url('/')); ?>">
              
-              <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="ふどうさん市場ロゴ">
              </a>
            </h1>
             <nav class="header__nav">
@@ -21,7 +21,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <img src="<?= get_template_directory_uri(); ?>/images/txt_menu01.png" alt="">
+              <img src="<?= get_template_directory_uri(); ?>/images/txt_menu01.png" alt="モバイルメニュー画像">
             </button>
             <?php get_template_part('include/mobile-menu');?>
           </div>

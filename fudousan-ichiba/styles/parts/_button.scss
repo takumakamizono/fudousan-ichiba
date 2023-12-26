@@ -1,6 +1,7 @@
 @use "../globals" as *;
 
 .btn {
+  min-width: 200px;
   position: relative;
   display: inline-block;
   background-color: $cBtnColor;

@@ -105,3 +105,11 @@ $(function () {
     focusOnSelect: true,
   });
 });
+
+$(function () {
+  $(".search-btn").on("click", function () {
+    var link = "http://localhost:4023/result?p=" + $(".stext").val();
+
+    window.location.href = link;
+  });
+});

@@ -157,3 +157,22 @@ add_filter('use_block_editor_for_post',function($use_block_editor,$post){
   return $use_block_editor;
 },10,2);
 
+add_action( 'admin_init', function() {
+  $taxonomy = 'kind'; 
+  $term_slug = [];
+  $post_type = 'property'; 
+
+  global $pagenow;
+
+  if ( $pagenow === 'post.php' && isset( $_GET['post'] ) ) {
+      $post_id = $_GET['post'];  
+      if ( has_term( $term_slug, $taxonomy, $post_id ) ) {
+          $post = get_post( $post_id );     
+          if ( $post && $post->post_type === $post_type ) {
+              remove_post_type_support( $post_type, 'editor' );
+          }
+      }
+  }
+} );
+
+

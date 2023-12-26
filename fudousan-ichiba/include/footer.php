@@ -2,7 +2,7 @@
           <div class="footer__inner">
             <div class="footer__left">
           <div class="logo item">
-             <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="">
+             <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="ふどうさん市場ロゴ">
             </div> 
             <ul class="footer__address">
               <li>〒880-2214 鹿児島県鹿児島市吉野町高浜2238-4</li>

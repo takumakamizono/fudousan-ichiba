@@ -327,7 +327,7 @@
       }
     }
     .contents-area-left {
-      padding: 10px;
+      padding: 20px 10px;
       background: $cWhite;
       width: 100%;
       @include mq(lg) {
@@ -375,6 +375,33 @@
         min-height: 5em;
         @include mq(md) {
           padding: 10px 0 10px 150px;
+        }
+      }
+    }
+    .detaildate-table {
+      line-height: 1.6;
+      @extend .font-ssm;
+      margin-bottom: 40px;
+      & tr {
+        border-bottom: 2px solid #eee;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      & td {
+        &:nth-child(1) {
+          width: 70px;
+          color: #666666;
+          flex-basis: 24%;
+          padding: 22px 0 10px;
+
+          @include mq(md) {
+            width: 150px;
+          }
+        }
+        &:nth-child(2) {
+          flex-basis: 75%;
+          padding: 22px 0 10px;
         }
       }
     }
@@ -479,6 +506,32 @@
     font-size: 12px;
     & th {
       width: 70px;
+      height: 43px;
+      border-bottom: 1px solid $cWhite;
+      text-align: center !important;
+      vertical-align: middle;
+      background-color: #ededed;
+      color: #999999;
+      font-weight: normal;
+
+      padding: 15px 10px;
+      line-height: 1;
+    }
+    & td {
+      background-color: #ffffff;
+      border-bottom: 1px solid #dedede;
+      vertical-align: middle !important;
+      padding: 10px;
+    }
+  }
+}
+
+.property-singleTable {
+  width: 100%;
+  & tr {
+    font-size: 12px;
+    & th {
+      width: 70px;
       height: 33px;
       border-bottom: 1px solid $cWhite;
       text-align: center !important;
@@ -487,14 +540,29 @@
       color: #999999;
       font-weight: normal;
 
-      padding: 8px 10px;
+      padding: 15px 10px;
       line-height: 1;
     }
     & td {
-      background-color: #ffffff;
-      border-bottom: 1px solid #dedede;
-      vertical-align: middle !important;
-      padding: 5px;
+      &:nth-child(1) {
+        width: 30%;
+
+        vertical-align: middle;
+        background-color: #ffffff;
+        border-bottom: 1px solid #dedede;
+        font-weight: normal;
+        padding: 20px 10px;
+        line-height: 1.4;
+        @include mq(md) {
+          text-align: center;
+        }
+      }
+      &:nth-child(2) {
+        background-color: #ffffff;
+        border-bottom: 1px solid #dedede;
+        vertical-align: middle !important;
+        padding: 20px 10px;
+      }
     }
   }
 }

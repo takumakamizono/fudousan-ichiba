@@ -15,6 +15,7 @@
           <div id="main-content">    
            
             <main>
+            <?php get_template_part('include/company'); ?>
             <?php get_template_part('include/product'); ?>
            
             <?php get_template_part('include/myhome'); ?>
