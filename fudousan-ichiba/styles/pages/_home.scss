@@ -157,6 +157,14 @@
       }
     }
   }
+  &__tel {
+    position: relative;
+    right: 50px;
+    width: 100px;
+    @include mq(lg) {
+      display: none;
+    }
+  }
 }
 
 .hero-sub {
@@ -178,6 +186,7 @@
     }
   }
   &__titles {
+    z-index: 100;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -705,8 +714,16 @@
       text-decoration: none;
       color: $main-txt;
       display: inline-block;
+      position: relative;
       @include mq(md) {
         padding: 10px 20px;
+        &::after {
+          content: "\f054";
+          font-family: "Font Awesome 5 free";
+          font-weight: 600;
+          position: absolute;
+          left: 5px;
+        }
       }
     }
     &:last-child {
@@ -795,17 +812,19 @@
     width: 90%;
     z-index: 10;
     position: relative;
-    color: white;
-    max-width: 800px;
+    color: $cWhite;
+    max-width: 850px;
     margin: 0 auto;
     & p {
       @extend .mb-md;
       @extend .font-md;
       font-weight: 500;
+      text-align: justify;
+      font-weight: 600;
     }
   }
   & .main-title {
-    color: #fff;
+    color: $cWhite;
   }
   &__btn {
     text-align: center;
@@ -853,7 +872,7 @@
   &__inner {
     position: relative;
     height: 60vh;
-    background: linear-gradient(#a6d8ff, #fff, #fff);
+    background: linear-gradient(#a6d8ff, $cWhite, $cWhite);
     overflow-x: hidden;
     @include mq(md) {
       height: 70vh;
@@ -922,9 +941,9 @@
   transform: translateX(-50%);
   width: 60px;
   height: 60px;
-  background: #fff;
+  background: $cWhite;
   border-radius: 50%;
-  box-shadow: 0 0 50px #fff;
+  box-shadow: 0 0 50px $cWhite;
 
   cursor: pointer;
   transition: 0.2s;
@@ -951,7 +970,7 @@
 
   & .sun {
     left: 45%;
-    box-shadow: 0 0 0 #fff;
+    box-shadow: 0 0 0 $cWhite;
     &::before {
       content: "";
       position: absolute;
@@ -1110,3 +1129,9 @@
   }
 }
 // kagoshimacityview end--------------------------
+
+.c-map-area-select {
+  transition: fill 0.2s;
+  cursor: pointer;
+  pointer-events: visible;
+}

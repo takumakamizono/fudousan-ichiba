@@ -100,7 +100,7 @@ $(function () {
     asNavFor: ".thumbnail",
   });
   $(".thumbnail").slick({
-    slidesToShow: 10,
+    slidesToShow: 20,
     asNavFor: ".property-slider",
     focusOnSelect: true,
   });
@@ -108,8 +108,21 @@ $(function () {
 
 $(function () {
   $(".search-btn").on("click", function () {
-    var link = "http://localhost:4023/result?p=" + $(".stext").val();
+    var link = "http://localhost:4023/result?place=" + $(".stext").val();
 
     window.location.href = link;
+  });
+});
+
+$(document).ready(function () {
+  $(".map-area").on("click", function () {
+    var areaName = $(this).data("area");
+
+    if (areaName) {
+      var link = "http://localhost:4023/result?place=" + areaName;
+      window.location.href = link;
+    } else {
+      console.log("データがありません");
+    }
   });
 });

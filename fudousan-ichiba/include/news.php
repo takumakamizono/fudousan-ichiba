@@ -10,7 +10,7 @@
             $args = [
                 'post_type' => 'post',
                 'category_name' => 'news',
-                'posts_per_page' => 1,
+                'posts_per_page' => 2,
             ];
             $the_query = new WP_Query($args);
             ?>

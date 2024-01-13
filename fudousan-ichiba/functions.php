@@ -27,9 +27,9 @@ if(!is_admin()){
 
     wp_enqueue_style('style.css',DIRE.'/style.css',array(),  $style_version);
     wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
-    wp_enqueue_script('youtube.min.js', DIRE.  '/scripts/libs/youtube.min.js', array(), $version,false);
-    wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', false);
-    wp_enqueue_script('jquery.js', DIRE.  '/scripts/libs/jquery.min.js', array(), $version,false);
+    wp_deregister_script('jquery');
+    wp_enqueue_script('jquery-min', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js', false);
+    wp_enqueue_script('jquery.js', DIRE.  '/scripts/libs/jquery.min.js', array(), $version .time(),false);
     wp_enqueue_script('slick.js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',false);
 
     wp_enqueue_script('scroll-polyfill.js', DIRE.  '/scripts/vendors/scroll-polyfill.js', array(), $version,false);
@@ -98,11 +98,11 @@ function custom_wpcf7_validate_kana($result,$tag)
 {
     $tag   = new WPCF7_Shortcode($tag);
     $name  = $tag->name;
-    $value = isset($_POST[$name]) ? trim(wp_unslash(strtr((string) $_POST[$name], "\n", " "))) : "";
+    $value = isset($_POST[$name]) ? wp_unslash(strtr((string) $_POST[$name], "\n", " ")) : "";
  
     //全角カタカナ又は平仮名の入力チェック
     if ($name === "your-kana") {
-        if(!preg_match("/^[ア-ヶーぁ-ん]+$/u", $value)) {
+        if(!preg_match("/^[ア-ヶーぁ-ん　 ]+$/u", $value)) {
             $result->invalidate( $tag,"全角カタカナ又は平仮名で入力してください。");
         }
     }
@@ -149,7 +149,7 @@ add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
 
 add_filter('use_block_editor_for_post',function($use_block_editor,$post){
   if($post->post_type==='page'){
-      if(in_array($post->post_name,['top_slide','sub_topimg','sitemap','works','subhead-img','property-cate'])){
+      if(in_array($post->post_name,['top_slide','sub_topimg','sitemap','works','subhead-img','property-cate','thanks'])){
           remove_post_type_support('page','editor');
           return false;
       }
@@ -174,5 +174,6 @@ add_action( 'admin_init', function() {
       }
   }
 } );
+
 
 

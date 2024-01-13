@@ -17,7 +17,6 @@
             <main>
             <?php get_template_part('include/company'); ?>
             <?php get_template_part('include/product'); ?>
-           
             <?php get_template_part('include/myhome'); ?>
             <?php get_template_part('include/rentalhome'); ?>
             <?php get_template_part('include/news'); ?>

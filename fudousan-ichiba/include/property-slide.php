@@ -16,7 +16,7 @@
                     <p class="works__title"><?php the_title(); ?></p>
                      <div class="works__desc">
                 
-  <?= has_term('rentalhome', 'kind') ? '<p class="works__desc-p">' . get_field('rentalhome-point') . ' </p>' : (has_term('myhome', 'kind') ? '<p class="works__desc-p">' . get_field('myhome-point') . ' </p>' : ''); ?>
+  <?= has_term('rentalhome', 'kind') ? '<p class="works__desc-p">' . get_field('rental-point') . ' </p>' : (has_term('myhome', 'kind') ? '<p class="works__desc-p">' . get_field('sale-point') . ' </p>' : ''); ?>
 
                     </div> 
                     <div class="works__item-btn">

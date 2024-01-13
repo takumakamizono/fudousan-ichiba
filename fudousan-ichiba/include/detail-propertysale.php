@@ -51,14 +51,14 @@ if ( ! empty ( $table ) ) {
               <div class="detail-price-box">
                 <dl class="price-box-main">
                   <dt>価格</dt>
-                  <dd id="price"><strong class="num"><?php the_field('price-propertysale');?></strong>万円</dd>
+                  <dd id="price"><strong class="num"><?php the_field('価格');?></strong>万円</dd>
                 </dl>
               
                 
                 <dl class="price-box-sub">
                 <?php if(has_term('land-sale', 'kind') ):?>
                 <dt>坪単価</dt>
-                  <dd><?php the_field('price-per-tsubo');?></dd>
+                  <dd><?php the_field('売坪数');?></dd>
                   <?php endif;?>
                   <dt>借地期間・地代(月額)</dt>
                   <dd><?php the_field('地代');?></dd>

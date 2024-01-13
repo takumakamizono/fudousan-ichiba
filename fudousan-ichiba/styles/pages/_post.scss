@@ -33,15 +33,14 @@
       &-img {
         width: 100%;
         margin: 0 auto;
-        @extend .mb-md;
-        height: 230px;
-        @include mq(lg) {
-          height: 330px;
-        }
         & > img {
           width: 100%;
-          height: 100%;
           object-fit: cover;
+          @extend .mb-md;
+          height: 230px;
+          @include mq(lg) {
+            height: 330px;
+          }
         }
       }
     }
@@ -80,8 +79,26 @@
       margin-bottom: 0;
     }
   }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-right {
+      & > span {
+        padding: 5px 8px;
+        background: $cBtnColor;
+        color: $cWhite;
+        font-size: 12px;
+        font-weight: 600;
+        width: 78px;
+        display: inline-block;
+      }
+    }
+  }
   &__block {
-    @extend .pb-md;
+    @extend .mb-md;
+    box-shadow: 1px 1px 5px #dfdfdf;
+    padding: 10px;
     & > a {
       text-decoration: none;
     }
@@ -136,15 +153,16 @@
     @extend .font-sm;
   }
   &__notinfo {
+    min-height: 300px;
     text-align: center;
     display: flex;
-    min-height: 100%;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 0;
     &-inner {
       & > p {
-        @extend .mb-lg;
+        @extend .font-md;
+        font-weight: 600;
+        @extend .mb-md;
       }
     }
   }
@@ -296,31 +314,34 @@
   }
   &-flex {
     @extend .content-width1000;
-    display: flex;
+    @extend .flex;
     justify-content: space-between;
-    flex-direction: column-reverse;
-    @extend .mb-sm;
 
+    @extend .mb-sm;
     @include mq(lg) {
+      flex-direction: column-reverse;
       position: relative;
       flex-direction: row;
       flex-wrap: wrap;
     }
     .image-area-left {
       width: 100%;
+
       @include mq(md) {
         flex-basis: 59%;
         width: 59%;
       }
     }
     .image-area-right {
+      display: flex;
       border: 1px solid $lightGray;
       width: 100%;
       margin-bottom: 16px;
       & > img {
         padding: 20px;
+        object-fit: contain;
       }
-      @include mq(lg) {
+      @include mq(md) {
         flex-basis: 39%;
         width: 39%;
         margin-bottom: 0;
@@ -407,12 +428,29 @@
     }
   }
 }
+
 .slick-img {
+  height: 270px;
+  @include mq(md) {
+    height: 320px;
+  }
+  @include mq(lg) {
+    height: 390px;
+  }
+
   & > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+.slick-tit {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  width: 100%;
+  @extend .font-sm;
 }
 .thumbnail {
   @extend .content-width1000;
@@ -420,7 +458,19 @@
     transform: unset !important;
   }
   &-img {
-    width: calc(100% / 5) !important;
+    width: calc(100% / 10) !important;
+    height: 30px;
+    @include mq(md) {
+      height: 50px;
+    }
+    @include mq(lg) {
+      height: 73px;
+    }
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 .detail-price {

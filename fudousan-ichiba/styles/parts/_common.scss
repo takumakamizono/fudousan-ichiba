@@ -620,3 +620,12 @@ body {
     }
   }
 }
+.time {
+  color: $lightGray;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.grecaptcha-badge {
+  z-index: 1000;
+  bottom: 55px !important;
+}

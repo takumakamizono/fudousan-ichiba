@@ -52,10 +52,14 @@ if (!empty($point)) {
                         <div class="property-slider">
     <div class="slick-img">
       <?php if(get_field('slide01')): ?>
+
       <img
         src="<?php the_field('slide01');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit01')): ?>  
+      <p class="slick-tit"><?php the_field('tit01');?></p>
+      <?php endif; ?>
       <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -66,6 +70,9 @@ if (!empty($point)) {
         src="<?php the_field('slide02');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit02')): ?>  
+      <p class="slick-tit"><?php the_field('tit02');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -76,6 +83,9 @@ if (!empty($point)) {
         src="<?php the_field('slide03');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit03')): ?>  
+      <p class="slick-tit"><?php the_field('tit03');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -86,6 +96,9 @@ if (!empty($point)) {
         src="<?php the_field('slide04');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit04')): ?>  
+      <p class="slick-tit"><?php the_field('tit04');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -96,6 +109,9 @@ if (!empty($point)) {
         src="<?php the_field('slide05');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit05')): ?>  
+      <p class="slick-tit"><?php the_field('tit05');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -106,6 +122,9 @@ if (!empty($point)) {
         src="<?php the_field('slide06');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit06')): ?>  
+      <p class="slick-tit"><?php the_field('tit06');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -116,6 +135,9 @@ if (!empty($point)) {
         src="<?php the_field('slide07');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit07')): ?>  
+      <p class="slick-tit"><?php the_field('tit07');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -126,6 +148,9 @@ if (!empty($point)) {
         src="<?php the_field('slide08');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit08')): ?>  
+      <p class="slick-tit"><?php the_field('tit08');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -136,6 +161,9 @@ if (!empty($point)) {
         src="<?php the_field('slide09');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit09')): ?>  
+      <p class="slick-tit"><?php the_field('tit09');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
@@ -146,10 +174,123 @@ if (!empty($point)) {
         src="<?php the_field('slide10');?>"
         alt="スライド画像"
       />
+      <?php if(get_field('tit10')): ?>  
+      <p class="slick-tit"><?php the_field('tit10');?></p>
+      <?php endif; ?>
         <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
       <?php endif; ?>
     </div>
+    <?php if(get_field('slide11')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide11');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit11')): ?>  
+      <p class="slick-tit"><?php the_field('tit11');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide12')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide12');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit12')): ?>  
+      <p class="slick-tit"><?php the_field('tit12');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide13')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide13');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit13')): ?>  
+      <p class="slick-tit"><?php the_field('tit13');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide14')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide14');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit14')): ?>  
+      <p class="slick-tit"><?php the_field('tit14');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide15')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide15');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit15')): ?>  
+      <p class="slick-tit"><?php the_field('tit15');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide16')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide16');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit16')): ?>  
+      <p class="slick-tit"><?php the_field('tit16');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide17')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide17');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit17')): ?>  
+      <p class="slick-tit"><?php the_field('tit17');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide18')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide18');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit18')): ?>  
+      <p class="slick-tit"><?php the_field('tit18');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide19')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide19');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit19')): ?>  
+      <p class="slick-tit"><?php the_field('tit19');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(get_field('slide20')): ?>  
+    <div class="slick-img">
+    <img
+        src="<?php the_field('slide20');?>"
+        alt="スライド画像"
+      />
+      <?php if(get_field('tit20')): ?>  
+      <p class="slick-tit"><?php the_field('tit20');?></p>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
   </div>
   
   </div>
@@ -260,6 +401,87 @@ if (!empty($point)) {
       />
          <?php else: ?>
         <img src="<?= get_template_directory_uri(); ?>/images/no-image.jpg" alt="noiamge画像">
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide11')): ?>  
+      <img
+        src="<?php the_field('slide11');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide12')): ?>  
+      <img
+        src="<?php the_field('slide12');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide13')): ?>  
+      <img
+        src="<?php the_field('slide13');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide14')): ?>  
+      <img
+        src="<?php the_field('slide14');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide15')): ?>  
+      <img
+        src="<?php the_field('slide15');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide16')): ?>  
+      <img
+        src="<?php the_field('slide16');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide17')): ?>  
+      <img
+        src="<?php the_field('slide17');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide18')): ?>  
+      <img
+        src="<?php the_field('slide18');?>"
+        alt="スライド画像"
+      />
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide19')): ?>  
+      <img
+        src="<?php the_field('slide19');?>"
+        alt="スライド画像"
+      />
+       
+      <?php endif; ?>
+    </div>
+    <div class="thumbnail-img">
+       <?php if(get_field('slide20')): ?>  
+      <img
+        src="<?php the_field('slide20');?>"
+        alt="スライド画像"
+      />
       <?php endif; ?>
     </div>
   </div>

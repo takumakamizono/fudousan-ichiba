@@ -5,9 +5,9 @@
              <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="ふどうさん市場ロゴ">
             </div> 
             <ul class="footer__address">
-              <li>〒880-2214 鹿児島県鹿児島市吉野町高浜2238-4</li>
-              <li>TEL : 099-282-0368</li>
-              <li>FAX : 099-264-9666</li>
+              <li>〒892-0971 鹿児島県鹿児島市吉野町9101-1</li>
+              <li>TEL : 099-802-4118</li>
+              <li>FAX : 099-802-4119</li>
             </ul>    
         
             </div>

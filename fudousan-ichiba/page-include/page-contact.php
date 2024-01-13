@@ -8,6 +8,17 @@
     <div class="page-contact__inner">
       <div class="page-contact__desc">
       <dl>
+  <dt><span>今すぐお問い合わせ</span></dt>
+  <dd>
+    <p>急なご用件がございましたら、お電話にて迅速に対応させていただきます。
+      状況によってはすぐにお電話に出られないこともございますが、お気軽にお掛けください。</p>
+    
+    <a  class="tel-img" href="tel:099-802-4118">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/tel_contact.png" alt="">
+    
+</a>
+   
+  </dd>
   <dt><span>お部屋探しの方へ</span></dt>
   <dd>
     <p>気になる物件や最初にかかる契約金はいくらですか？入居時期は相談できますか？など、何でもお問合せください！</p>

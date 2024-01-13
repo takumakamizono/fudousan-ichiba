@@ -57,7 +57,7 @@ if ($terms && is_array($terms)) {
     $term_name = $term->name;
     $term_slug = $term->slug;
 } else {
-    $term_name = '現在こちらの制作実績の投稿はありません'; // カテゴリがない場合のデフォルト値
+    $term_name = '現在こちらの物件情報は準備中です'; // カテゴリがない場合のデフォルト値
     $term_slug = 'coming soon'; // カテゴリがない場合のデフォルト値
 }
 ?>

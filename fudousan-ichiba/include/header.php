@@ -17,6 +17,10 @@
                 
                 ?>     
             </nav>
+            <div class="header__tel">
+              <a href="tel:099-802-4118"><img src="<?= get_template_directory_uri(); ?>/images/tel_contact.png" alt="電話番号"></a>
+            </div>
+
             <button class="mobile-menu__btn">
               <span></span>
               <span></span>

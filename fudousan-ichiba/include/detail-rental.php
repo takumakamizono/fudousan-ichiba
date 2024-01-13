@@ -48,12 +48,16 @@ if ( ! empty ( $table ) ) {
                       </div>
             <section class="detail-price">
               <div class="detail-price-box">
+            <?php if( has_term('rentalhome', 'kind')|| has_term('rented-commercial', 'kind') ):?>
+
                 <dl class="price-box-main">
+                  
                   <dt>賃料</dt>
-                  <dd id="price"><strong class="num"><?php the_field('rentalhome-rent');?></strong>万円</dd>
+                  <dd id="price"><strong class="num"><?php the_field('賃料');?></strong>万円</dd>
                   <dt>共益費</dt>
                   <dd id="maintenance_fee"><span class="num"><?php the_field('rentalhome-kyoekihi');?></span>円</dd>
                 </dl>
+              
                 <dl class="price-box-sub">
                   <dt>敷金</dt>
                   <dd><?php the_field('rentalhome-shikikin');?></dd>
@@ -74,7 +78,65 @@ if ( ! empty ( $table ) ) {
                   <dt>その他費用について</dt>
                   <dd><?php the_field('rentalhome-others');?></dd>
                 </dl>
-                
+                <?php elseif(has_term('rented-land', 'kind')):?>
+                  <dl class="price-box-main">
+                  
+                  <dt>賃料</dt>
+                  <dd id="price"><strong class="num"><?php the_field('賃料');?></strong>万円</dd>
+                  <dt>管理費</dt>
+                  <dd id="maintenance_fee"><span class="num"><?php the_field('管理費');?></span>円</dd>
+                </dl>
+              
+                <dl class="price-box-sub">
+                  <dt>敷金</dt>
+                  <dd><?php the_field('敷金');?></dd>
+                  <dt>礼金</dt>
+                  <dd><?php the_field('礼金');?></dd>
+                  <dt>保証金</dt>
+                  <dd><?php the_field('保証金');?></dd>
+                  <dt>敷引</dt>
+                  <dd><?php the_field('敷引');?></dd>
+                  <dt>償却金</dt>
+                  <dd><?php the_field('償却費');?></dd>
+                  <dt>更新料</dt>
+                  <dd><?php the_field('更新料');?></dd>
+                  <dt>坪単価</dt>
+                  <dd><?php the_field('貸坪単価');?></dd>
+                  <dt>その他一時金</dt>
+                  <dd><?php the_field('その他一時金');?></dd>
+                  <dt>その他月次費用</dt>
+                  <dd><?php the_field('その他月次費用');?></dd>
+                  <dt>その他費用について</dt>
+                  <dd><?php the_field('その他費用について');?></dd>
+                </dl>
+                <?php elseif(has_term('parking', 'kind')):?>
+                  <dl class="price-box-main">
+                  
+                  <dt>賃料</dt>
+                  <dd id="price"><strong class="num"><?php the_field('賃料');?></strong>万円</dd>
+                  <dt>管理費</dt>
+                  <dd id="maintenance_fee"><span class="num"><?php the_field('管理費');?></span>円</dd>
+                </dl>
+              
+                <dl class="price-box-sub">
+                  <dt>敷金</dt>
+                  <dd><?php the_field('敷金');?></dd>
+                  <dt>礼金</dt>
+                  <dd><?php the_field('礼金');?></dd>
+                  <dt>保証金</dt>
+                  <dd><?php the_field('保証金');?></dd>
+                  <dt>敷引</dt>
+                  <dd><?php the_field('敷引');?></dd>
+                  <dt>償却金</dt>
+                  <dd><?php the_field('償却金');?></dd>
+                  <dt>更新料</dt>
+                  <dd><?php the_field('更新料');?></dd>
+                  <dt>その他月次費用</dt>
+                  <dd><?php the_field('その他月次費用');?></dd>
+                  <dt>その他費用について</dt>
+                  <dd><?php the_field('その他費用について');?></dd>
+                </dl>
+                <?php endif;?>
               </div>
             </section>
             <?php if (  has_term('rentalhome', 'kind')|| has_term('rented-commercial', 'kind')): ?>

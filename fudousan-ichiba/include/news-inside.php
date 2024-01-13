@@ -2,7 +2,11 @@
 <li id="post-<?php the_ID(); ?>"<?php post_class('news__box item') ?> >
 <a href="<?php the_permalink(); ?>">
 <div class="news__thumbnail">
+<?php if(has_post_thumbnail()): ?>
 <?php the_post_thumbnail(); ?>
+<?php else: ?>
+    <img src="<?= get_template_directory_uri(); ?>/images/fudousanichiba-logo.png" alt="">
+<?php endif; ?>
 </div>
 <div class="news__sentence">                             
                        <ul class="cat">
